@@ -20,30 +20,40 @@
   </head>
   <body>
     <div class="container">
-  <h1>Benchmarking on Azure</h1>
-  <h2>Machine Details</h2>
+  <h1>AWS Benchmarks Machine Specifications</h1>
   <table class="table">
     <thead>
       <tr>
         <th scope="col">Type</th>
         <th scope="col">vCPU</th>
         <th scope="col">Mem (GiB)</th>
-        <th scope="col">CPU model</th>
+        <th scope="col">Disk</th>
+        <th scope="col">Network Performance (Gbps)</th>
+        <th scope="col">EBS Bandwidth(Mbps)</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row">D16s v3</th>
+        <th scope="row">c5.4xlarge</th>
         <td>16</td>
-        <td>64</td>
-        <td>Intel(R) Xeon(R) Platinum 8171M CPU @ 2.60GHz</td>
+        <td>32</td>
+        <td>EBS-only</td>
+        <td>Up to 10</td>
+        <td>4750</td>
       </tr>
     </tbody>
   </table>
   <div id="results">
     <h1>Benchmarking Results</h1>
     <p>
-      Results are split by distance type and dataset. Each dataset is annotated by <em>(k = ...)</em>, the number of nearest neighbors an algorithm is supposed to return. The plot shown depicts <em>Recall</em> (the fraction of true nearest neighbors found, on average over all queries) against <em>Queries per second</em>. Clicking on a plot reveals detailed interactive plots, including approximate recall, index size, and build time.
+      Results are split by distance measure and dataset. In the bottom, you can
+      find an overview of an algorithm's performance on all datasets. Each
+      dataset is annoted by <em>(k = ...)</em>, the number of nearest neighbors
+      an algorithm was supposed to return. The plot shown depicts
+      <em>Recall</em> (the fraction of true nearest neighbors found, on average
+      over all queries) against <em>Queries per second</em>. Clicking on a plot
+      reveils detailled interactive plots, including approximate recall, index
+      size, and build time.
     </p>
          <div class="resultsContainer">
             <h3>Distance: Angular</h3>
